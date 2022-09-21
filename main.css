@@ -1,0 +1,74 @@
+body {
+    margin: 3em;
+}
+
+.videos-container {
+    background: linear-gradient(burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, rgb(172, 131, 79));
+    border-bottom: 1px solid rgb(156, 118, 67);
+    width: 275px;
+    margin: 0.5em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0em -0.5em 1em grey;
+}
+
+.videos-container:hover{
+    opacity: 80%;
+}
+
+.picture img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    color: brown;
+    padding-left: 0.5em;
+}
+
+.views {
+    text-decoration: underline;
+    color: chocolate;
+    padding-left: 0.5em;
+}
+
+.likes {
+    font-weight: 200;
+    color: chocolate;
+    padding-left: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#videoSlide {
+    background-color: lightgray;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.placeholder{
+    background-color: brown;
+    text-align: center;
+    height: 2em;
+    margin: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: antiquewhite;
+}
+
+.input{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+input{
+    width: 50%;
+    margin: 0px;
+    padding: 0;
+}
