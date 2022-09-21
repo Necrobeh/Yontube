@@ -1,21 +1,34 @@
 body {
     margin: 3em;
+    background-image: url("resources/zebra.jpg");
+}
+
+a{
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.zebra-logo{
+    width: 75%;
+    height: 200px;
+    background-image: url("resources/zebra-logo.svg");
+    background-repeat: no-repeat;
+    margin-left: 17%;
+    margin-bottom: 1em;
 }
 
 .videos-container {
-    background: linear-gradient(burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, burlywood, rgb(172, 131, 79));
-    border-bottom: 1px solid rgb(156, 118, 67);
     width: 275px;
     margin: 0.5em;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 0em -0.5em 1em grey;
+    background-color: white;
 }
 
 .videos-container:hover{
-    opacity: 80%;
+    box-shadow: 0em -0.5em 1em white;
 }
 
 .picture img {
@@ -24,41 +37,27 @@ body {
 }
 
 .title {
-    color: brown;
     padding-left: 0.5em;
 }
 
 .views {
     text-decoration: underline;
-    color: chocolate;
     padding-left: 0.5em;
 }
 
 .likes {
     font-weight: 200;
-    color: chocolate;
     padding-left: 0.5em;
     margin-bottom: 0.5em;
+    color: darkgreen;
 }
 
 #videoSlide {
-    background-color: lightgray;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-radius: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     margin-top: 2em;
-}
-
-.placeholder{
-    background-color: brown;
-    text-align: center;
-    height: 2em;
-    margin: 0px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    color: antiquewhite;
 }
 
 .input{
@@ -68,18 +67,13 @@ body {
 }
 
 input{
-    width: 50%;
+    width: 53.5%;
     border-radius: 1em;
-    border: 2px solid lightgray
-}
-
-.underline{
-    margin: 2em;
-    border: 2px solid lightgray;
-    border-radius: 1em;
+    border: 2px solid antiquewhite;
 }
 
 #autocompletion{
+    width: 50%;
     position: absolute;
     left: 25%;
     display: flex;
@@ -88,12 +82,27 @@ input{
 }
 
 #autocompletion div{
-    border: 1px solid lightgray;
-    height: 1.1em;
     width: 100%;
+    height: 1.1em;
+    border: none;
+    border-radius: 20px;
 }
 
-div p{
-    margin: 0px;
+.even{
+    background-color: antiquewhite;
+}
+
+.odd{
     background-color: white;
+}
+
+.even a, .odd a{
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .zebra-logo{
+        background-image: url("resources/zebra-logo-responsive.svg");
+    }
 }
