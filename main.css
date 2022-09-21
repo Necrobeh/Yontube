@@ -71,4 +71,6 @@ input{
     width: 50%;
     margin: 0px;
     padding: 0;
+    border-radius: 1em;
+    border: 2px solid lightgray
 }
