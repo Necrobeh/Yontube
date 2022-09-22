@@ -9,12 +9,25 @@ a{
 }
 
 .zebra-logo{
-    width: 75%;
+    width: 65%;
     height: 200px;
-    background-image: url("resources/zebra-logo.svg");
+    background-image: url("resources/phacochere-logo.svg");
     background-repeat: no-repeat;
-    margin-left: 17%;
     margin-bottom: 1em;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.splash{
+    background-image: url("resources/splash.png");
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    z-index: -3;
 }
 
 .videos-container {
@@ -103,6 +116,9 @@ input{
 
 @media screen and (max-width: 600px) {
     .zebra-logo{
-        background-image: url("resources/zebra-logo-responsive.svg");
+        background-image: url("resources/phacochere-logo-responsive.svg");
+    }
+    .splash{
+        left: 25%;
     }
 }
