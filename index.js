@@ -40,7 +40,7 @@ function search() {
     getValue = getValue.toLowerCase();
     const filteredVideos = videoFilter(getValue);
     videoSlide.innerHTML = '';
-    if (getValue !== '') {
+    if (getValue !== '' && filteredVideos.length > 0) {
         for (let i = 0; i < filteredVideos.length; i++) {
             videoSlide.innerHTML +=
                 `<div class="videos-container"><a href=${filteredVideos[i].link}>
@@ -51,6 +51,7 @@ function search() {
             </a></div>`;
 
         }
+        //Cette partie gère l'autocompletion
         inputScroll.innerHTML = '';
         for (let j = 0; j < filteredVideos.length; j++) {
             if (j % 2 === 0) {
@@ -61,6 +62,12 @@ function search() {
             }
         }
     }
+    //Renvoi d'une erreur en cas de recherche infructeuse
+    else if(getValue !== '' && filteredVideos.length === 0){
+        videoSlide.innerHTML = `<p class='error'>sorry bruh, no results here...</p>`;
+        inputScroll.innerHTML = '';
+    }
+    //Une fois l'input effacé, retour à l'affichage standard
     else {
         videoSlide.innerHTML = '';
         inputScroll.innerHTML = '';
@@ -70,7 +77,6 @@ function search() {
 
 //Initialisation de la fonction de responsivité du logo
 function phacochereLogoCall(){
-    console.log('test')
 if (window.screen.availWidth < 1100) {
     phacochereLogo.innerHTML =
         `
