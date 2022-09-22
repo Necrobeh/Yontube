@@ -1,6 +1,16 @@
 body {
-    margin: 3em;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+.main-block{
+    margin: 0px;
+    width: 85%;
     background-image: url("resources/zebra.jpg");
+    border-left: 2px solid antiquewhite;
+    border-right: 2px solid antiquewhite;
+    padding-bottom: 220px;
 }
 
 a{
@@ -13,14 +23,14 @@ a{
     justify-content: center;
 }
 
-.splash{
+/* .splash{
     background-image: url("resources/splash.png");
     width: 200px;
     height: 200px;
     position: absolute;
     left: 50%;
-    z-index: -3;
-}
+    z-index: -1;
+} */
 
 .videos-container {
     width: 275px;

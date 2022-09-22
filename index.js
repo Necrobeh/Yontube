@@ -1,5 +1,9 @@
+//Récupération des id HTML
 const videoSlide = document.getElementById('videoSlide');
 const inputScroll = document.getElementById('autocompletion');
+const phacochereLogo = document.getElementById('phacochere-logo');
+
+//Tableau des vidéos
 const videos = [
     { img: 'img0', title: 'Une maison trop chou!', views: '200000 &#128065;', likes: '50 👍', link: 'https://www.youtube.com/watch?v=pHnwN2Ro3vE&ab_channel=Prunelledumonde' },
     { img: 'img1', title: 'Promenade au lac d\' Unn', views: '300000 &#128065;', likes: '32000 👍', link: 'https://www.youtube.com/watch?v=W6snmZMmJuk&t=65s&ab_channel=TheEmbracedOne' },
@@ -11,6 +15,7 @@ const videos = [
     { img: 'img7', title: 'Ne posez pas de questions...', views: '1 &#128065;', likes: '10 👍', link: 'https://www.youtube.com/watch?v=RBrNsKlttrA&ab_channel=JShayTranslations' }
 ]
 
+//Initialisation de la fonction affichant toutes les vidéos
 function displayAllVideos() {
     for (let i = 0; i < videos.length; i++) {
         videoSlide.innerHTML +=
@@ -23,13 +28,13 @@ function displayAllVideos() {
     }
 }
 
+//Initialisation de la fonction de filtre des videos par segment compris dans le titre
 function videoFilter(input) {
     let filteredVideos = videos.filter(arr => arr.title.toLowerCase().includes(input));
     return filteredVideos;
 }
 
-displayAllVideos();
-
+//Initialisation de la fonction appelée à chaque input dans le HTML
 function search() {
     let getValue = document.getElementById('search').value;
     getValue = getValue.toLowerCase();
@@ -63,8 +68,10 @@ function search() {
     }
 }
 
-phacochereLogo = document.getElementById('phacochere-logo');
-if (window.screen.availWidth < 600) {
+//Initialisation de la fonction de responsivité du logo
+function phacochereLogoCall(){
+    console.log('test')
+if (window.screen.availWidth < 1100) {
     phacochereLogo.innerHTML =
         `
 <img src="resources/phacochere-logo-responsive.svg">
@@ -75,4 +82,10 @@ else {
         `
 <img src="resources/phacochere-logo.svg">
 `
-}
+}}
+
+//Appel de l'affichage initial : toutes les videos s'affichent
+displayAllVideos();
+
+//Appel initial du logo
+phacochereLogoCall();
