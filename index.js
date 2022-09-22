@@ -38,23 +38,24 @@ function search() {
     if (getValue !== '') {
         for (let i = 0; i < filteredVideos.length; i++) {
             videoSlide.innerHTML +=
-            `<div class="videos-container"><a href=${filteredVideos[i].link}>
+                `<div class="videos-container"><a href=${filteredVideos[i].link}>
             <div class="picture"><img src ="resources/${filteredVideos[i].img}.jpg"/></div>
             <div class="title">${filteredVideos[i].title}</div>
             <div class="views">${filteredVideos[i].views}</div>
             <div class="likes">${filteredVideos[i].likes}</div>
             </a></div>`;
-            
+
         }
         inputScroll.innerHTML = '';
-        for (let j = 0 ; j < filteredVideos.length ; j++){
-            if (j % 2 === 0){
+        for (let j = 0; j < filteredVideos.length; j++) {
+            if (j % 2 === 0) {
                 inputScroll.innerHTML += `<div class="even"><a href="${filteredVideos[j].link}">${filteredVideos[j].title}</a></div>`;
+            }
+            else {
+                inputScroll.innerHTML += `<div class="odd"><a href="${filteredVideos[j].link}">${filteredVideos[j].title}</a></div>`;
+            }
         }
-        else{
-            inputScroll.innerHTML += `<div class="odd"><a href="${filteredVideos[j].link}">${filteredVideos[j].title}</a></div>`;
-        }
-    }}
+    }
     else {
         videoSlide.innerHTML = '';
         inputScroll.innerHTML = '';
@@ -62,3 +63,16 @@ function search() {
     }
 }
 
+phacochereLogo = document.getElementById('phacochere-logo');
+if (window.screen.availWidth < 600) {
+    phacochereLogo.innerHTML =
+        `
+<img src="resources/phacochere-logo-responsive.svg">
+`
+}
+else {
+    phacochereLogo.innerHTML =
+        `
+<img src="resources/phacochere-logo.svg">
+`
+}
