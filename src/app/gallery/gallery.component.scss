@@ -1,0 +1,47 @@
+p{
+    margin: 0.25em;
+}
+
+.gallery-container{
+    display : flex;
+    justify-content: center;
+}
+
+.gallery{
+    width: 75%;
+    display : flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.video-container{
+    width: 300px;
+    margin: 0.5em;
+    border: 1px solid white;
+    border-radius: 1em;
+    background-color: white;
+}
+
+.video-container:hover{
+    box-shadow: 0em 0.5em 1em white;
+}
+
+
+.thumbnail{
+    width: 100%;
+    border-radius: 1em;
+}
+.infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.minor-info{
+    text-align: right;
+}
+

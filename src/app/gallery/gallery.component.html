@@ -1,0 +1,21 @@
+<!-- <input type="button" value="Go !" (click)="refresh()"> -->
+
+<div class="gallery-container">
+<div class="gallery" (input)="filterVideoList()">
+    <div *ngFor="let video of filteredVideoList, let i = index">
+        <div class="video-container">
+            <img class="thumbnail" src="./assets/{{filteredVideoList[i].thumbnail}}">
+            <div class="infos">
+                <div>
+                    <p class="title">{{filteredVideoList[i].title}}</p>
+                    <p>{{filteredVideoList[i].uploader}}</p>
+                </div>
+                <div class="minor-info">
+                    <p>{{filteredVideoList[i].views}}</p>
+                    <p>{{filteredVideoList[i].dateOfUpload}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
